@@ -27,7 +27,7 @@ eksctl create iamserviceaccount \
   --namespace=kube-system \
   --name=alb-controller \
   --role-name ALBControllerRole \
-  --attach-policy-arn=arn:aws:iam::***********:policy/ALBIAMPolicy \
+  --attach-policy-arn=arn:aws:iam::**********117:policy/ALBIAMPolicy \
   --approve
 
 
@@ -40,7 +40,7 @@ pw/credentials [aws credentials] should be used here
   --namespace=kube-system \
   --name=aws-load-balancer-controller-2 \
   --role-name AmazonEKSLoadBalancerControllerRole \
-  --attach-policy-arn=arn:aws:iam::368042073117:policy/AWSLoadBalancerControllerIAMPolicy \
+  --attach-policy-arn=arn:aws:iam::***********117:policy/AWSLoadBalancerControllerIAMPolicy \
   --approve \
   --override-existing-serviceaccounts
 

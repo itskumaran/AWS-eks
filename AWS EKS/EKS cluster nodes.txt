@@ -1,0 +1,13 @@
+eksctl create cluster \
+  --name kovaion-cluster \
+  --region ap-south-1 \
+  --nodegroup-name eks-worker-nodes \
+  --node-type t2.small \
+  --nodes 2 \
+  --nodes-min 2 \
+  --nodes-max 3\
+  --ssh-access \
+  --ssh-public-key target1.pem \
+  --managed
+
+

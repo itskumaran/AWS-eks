@@ -1,0 +1,46 @@
+-go to iam users 
+-create new user
+-attach policy for that user
+-add permission to the user
+
+
+create inline policy
+-policies required to run eks cluster
+1}AmazonEKSClusterPolicy 
+2}cloudformationfullaccess
+3}"ec2:CreateVpc",
+4}ec2:CreateInternetGateway",
+5}iam:CreateRole",
+6}iam:CreatePolicy",
+7}iam:AttachRolePolicy",
+8}iam:PassRole"
+
+
+aws admin acct number :368042073117[kumarangs]
+
+iam user :kovaion
+pw :kovaion@1
+
+
+eksctl create iamserviceaccount \
+  --cluster=devops \
+  --namespace=kube-system \
+  --name=alb-controller \
+  --role-name ALBControllerRole \
+  --attach-policy-arn=arn:aws:iam::368042073117:policy/ALBIAMPolicy \
+  --approve
+
+
+
+AKIAVLMIELQO6JYNBU57
+5ZQOA/3J24A6aPAzg+b6DJ+Gbz+rj6LuNtekKVWj
+
+ eksctl create iamserviceaccount \
+  --cluster=demo-kovi \
+  --namespace=kube-system \
+  --name=aws-load-balancer-controller-2 \
+  --role-name AmazonEKSLoadBalancerControllerRole \
+  --attach-policy-arn=arn:aws:iam::368042073117:policy/AWSLoadBalancerControllerIAMPolicy \
+  --approve \
+  --override-existing-serviceaccounts
+

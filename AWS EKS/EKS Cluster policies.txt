@@ -16,10 +16,10 @@ create inline policy
 8}iam:PassRole"
 
 
-aws admin acct number :368042073117[kumarangs]
+aws admin acct number :]
 
-iam user :kovaion
-pw :kovaion@1
+iam user :
+pw :
 
 
 eksctl create iamserviceaccount \
@@ -27,13 +27,13 @@ eksctl create iamserviceaccount \
   --namespace=kube-system \
   --name=alb-controller \
   --role-name ALBControllerRole \
-  --attach-policy-arn=arn:aws:iam::368042073117:policy/ALBIAMPolicy \
+  --attach-policy-arn=arn:aws:iam::***********:policy/ALBIAMPolicy \
   --approve
 
 
 
-AKIAVLMIELQO6JYNBU57
-5ZQOA/3J24A6aPAzg+b6DJ+Gbz+rj6LuNtekKVWj
+pw/credentials [aws credentials] should be used here
+
 
  eksctl create iamserviceaccount \
   --cluster=demo-kovi \
